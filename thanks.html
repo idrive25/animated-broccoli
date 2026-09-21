@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank you | I Drive 25</title>
+  <meta name="description" content="Your message has been sent.">
+  <meta name="theme-color" content="#0b4f9c">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="I Drive 25 home">
+        <img src="logo.png" alt="I Drive 25 logo">
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
+      <nav class="nav" id="site-nav">
+        <a href="mission.html">Our Mission</a>
+        <a href="what-we-do.html">What We Do</a>
+        <a href="community.html">Community</a>
+        <a href="about.html">About</a>
+        <a class="nav-button" href="support.html">Support Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <h1>Thank you.</h1>
+        <p>Your message has been sent.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <a class="button primary big" href="index.html">Back to home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="index.html"><img src="logo.png" alt="I Drive 25 logo"></a>
+        <p>Safer neighborhoods. Safer school zones. Safer choices.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="mission.html">Mission</a>
+        <a href="what-we-do.html">What We Do</a>
+        <a href="community.html">Community</a>
+        <a href="about.html">About</a>
+        <a href="support.html">Support</a>
+      </div>
+    </div>
+    <div class="container copyright">&copy; 2026 I Drive 25. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+
+    function setMenu(open) {
+      nav.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    }
+
+    toggle.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+    document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+  </script>
+</body>
+</html>
