@@ -5,16 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>I Drive 25 | Safer Neighborhoods. Safer School Zones.</title>
   <meta name="description" content="I Drive 25 is a California nonprofit focused on traffic safety awareness, safer driving, and community support for neighborhoods and school zones.">
+  <meta name="theme-color" content="#0b4f9c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800;900&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip" href="#top">Skip to main content</a>
+
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="#top" aria-label="I Drive 25 home">
         <img src="logo.png" alt="I Drive 25 logo">
       </a>
-      <button class="menu-toggle" aria-label="Open menu">☰</button>
-      <nav class="nav">
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
+      <nav class="nav" id="site-nav">
         <a href="#mission">Our Mission</a>
         <a href="#approach">What We Do</a>
         <a href="#community">Community</a>
@@ -26,12 +32,9 @@
 
   <main id="top">
     <section class="hero">
-      <div class="hero-shape shape-one"></div>
-      <div class="hero-shape shape-two"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">TRAFFIC SAFETY • COMMUNITY • EDUCATION</div>
-          <h1>25 mph can make a <span>difference.</span></h1>
+          <h1>25 mph can make a difference.</h1>
           <p class="lead">
             I Drive 25 promotes safe driving and works to protect children in neighborhoods and school zones by encouraging a 25 mph speed limit.
           </p>
@@ -39,66 +42,83 @@
             <a class="button primary" href="#donate">Support I Drive 25</a>
             <a class="button secondary" href="#mission">Learn More</a>
           </div>
-          <div class="trust-row">
-            <div><strong>25 MPH</strong><span>Safer-speed awareness</span></div>
-            <div><strong>SCHOOL ZONES</strong><span>Protecting children</span></div>
-            <div><strong>NEIGHBORHOODS</strong><span>Building safer streets</span></div>
-          </div>
+          <ul class="trust-row">
+            <li><strong>25 mph</strong><span>Safer-speed awareness</span></li>
+            <li><strong>School zones</strong><span>Protecting children</span></li>
+            <li><strong>Neighborhoods</strong><span>Building safer streets</span></li>
+          </ul>
         </div>
-        <div class="hero-card" aria-label="I Drive 25 message">
-          <div class="road">
-            <div class="road-line"></div>
-            <div class="speed-sign"><small>SLOW</small><strong>25</strong><span>MPH</span></div>
+
+        <div class="hero-sign" aria-hidden="true">
+          <div class="sign">
+            <div class="sign-face">
+              <span class="sign-word">SPEED</span>
+              <span class="sign-word">LIMIT</span>
+              <span class="sign-num">25</span>
+            </div>
           </div>
-          <div class="hero-card-copy">
-            <span class="mini-label">OUR MESSAGE</span>
-            <h2>Slow down. Stay alert. Look out for one another.</h2>
-            <p>Small changes in driving habits can help create safer places for families, students, pedestrians, and everyone who calls a neighborhood home.</p>
-          </div>
+          <div class="post"></div>
         </div>
+      </div>
+    </section>
+
+    <section class="section message" aria-labelledby="message-heading">
+      <div class="container message-grid">
+        <h2 id="message-heading">Slow down. Stay alert. Look out for one another.</h2>
+        <p>Small changes in driving habits can help create safer places for families, students, pedestrians, and everyone who calls a neighborhood home.</p>
       </div>
     </section>
 
     <section id="mission" class="section mission">
       <div class="container two-col">
+        <h2>Safer driving starts with awareness.</h2>
         <div>
-          <div class="eyebrow">OUR MISSION</div>
-          <h2>Safer driving starts with awareness.</h2>
-        </div>
-        <div>
-          <p class="large"><strong>Mission Statement:</strong><br>To promote safe driving and protect children in neighborhoods and school zones by encouraging a 25 mph speed limit.</p>
-          <p><strong>Vision Statement:</strong><br>A nation of mindful drivers who prioritize safety, community, and respect for residential neighborhoods and school zones.</p>
+          <div class="statement statement-lg">
+            <h3>Mission Statement</h3>
+            <p>To promote safe driving and protect children in neighborhoods and school zones by encouraging a 25 mph speed limit.</p>
+          </div>
+          <div class="statement statement-sm">
+            <h3>Vision Statement</h3>
+            <p>A nation of mindful drivers who prioritize safety, community, and respect for residential neighborhoods and school zones.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="approach" class="section light">
+    <section id="approach" class="section paper">
       <div class="container">
         <div class="section-heading">
-          <div class="eyebrow">WHAT WE DO</div>
           <h2>Turning concern into community action.</h2>
           <p>We focus on practical, visible ways to improve traffic-safety awareness where people live, walk, bike, and take their children to school.</p>
         </div>
-        <div class="cards">
-          <article class="card">
-            <div class="icon">25</div>
-            <h3>Speed Awareness</h3>
-            <p>Promote awareness of 25 mph driving and the importance of adjusting speed for residential streets, school zones, traffic, weather, and visibility.</p>
+        <div class="programs">
+          <article class="program">
+            <div class="badge badge-speed" aria-hidden="true">25</div>
+            <div>
+              <h3>Speed Awareness</h3>
+              <p>Promote awareness of 25 mph driving and the importance of adjusting speed for residential streets, school zones, traffic, weather, and visibility.</p>
+            </div>
           </article>
-          <article class="card">
-            <div class="icon">!</div>
-            <h3>Education</h3>
-            <p>Share clear, accessible information about traffic-safety laws, responsible driving habits, pedestrian awareness, and school-zone safety.</p>
+          <article class="program">
+            <div class="badge badge-warn" aria-hidden="true">!</div>
+            <div>
+              <h3>Education</h3>
+              <p>Share clear, accessible information about traffic-safety laws, responsible driving habits, pedestrian awareness, and school-zone safety.</p>
+            </div>
           </article>
-          <article class="card">
-            <div class="icon">+</div>
-            <h3>Community Partnerships</h3>
-            <p>Work with residents, schools, public agencies, and community organizations to identify concerns and support practical safety initiatives.</p>
+          <article class="program">
+            <div class="badge badge-blue" aria-hidden="true">+</div>
+            <div>
+              <h3>Community Partnerships</h3>
+              <p>Work with residents, schools, public agencies, and community organizations to identify concerns and support practical safety initiatives.</p>
+            </div>
           </article>
-          <article class="card">
-            <div class="icon">✓</div>
-            <h3>Enforcement Support</h3>
-            <p>Explore responsible partnerships that can help increase traffic-safety presence in neighborhoods and school zones when resources permit.</p>
+          <article class="program">
+            <div class="badge badge-green" aria-hidden="true">&#10003;</div>
+            <div>
+              <h3>Enforcement Support</h3>
+              <p>Explore responsible partnerships that can help increase traffic-safety presence in neighborhoods and school zones when resources permit.</p>
+            </div>
           </article>
         </div>
       </div>
@@ -106,33 +126,32 @@
 
     <section id="community" class="section community">
       <div class="container community-grid">
-        <div class="community-panel">
-          <div class="eyebrow">A COMMUNITY EFFORT</div>
+        <div>
           <h2>It takes all of us to make safer streets.</h2>
           <p>Parents, students, neighbors, educators, first responders, and drivers all have a role in creating a culture of traffic safety.</p>
-          <div class="check-list">
-            <div><span>✓</span> Slow down in neighborhoods</div>
-            <div><span>✓</span> Follow school-zone traffic rules</div>
-            <div><span>✓</span> Watch for pedestrians and cyclists</div>
-            <div><span>✓</span> Put the phone away while driving</div>
+          <ul class="check-list">
+            <li><span aria-hidden="true">&#10003;</span>Slow down in neighborhoods</li>
+            <li><span aria-hidden="true">&#10003;</span>Follow school-zone traffic rules</li>
+            <li><span aria-hidden="true">&#10003;</span>Watch for pedestrians and cyclists</li>
+            <li><span aria-hidden="true">&#10003;</span>Put the phone away while driving</li>
+          </ul>
+        </div>
+        <figure class="school-sign">
+          <div class="school-sign-inner">
+            <blockquote>
+              <p>&ldquo;Every trip through a neighborhood or school zone is an opportunity to make a safer choice.&rdquo;</p>
+            </blockquote>
+            <figcaption>I Drive 25</figcaption>
           </div>
-        </div>
-        <div class="quote-card">
-          <div class="quote-mark">“</div>
-          <p>Every trip through a neighborhood or school zone is an opportunity to make a safer choice.</p>
-          <span>I DRIVE 25</span>
-        </div>
+        </figure>
       </div>
     </section>
 
     <section id="about" class="section about">
       <div class="container two-col">
-        <div>
-          <div class="eyebrow">ABOUT I DRIVE 25</div>
-          <h2>Built around a simple idea: slow down and look out for each other.</h2>
-        </div>
-        <div>
-          <p>I Drive 25 was created to bring greater attention to traffic safety in the places where everyday life happens—our neighborhoods and school zones.</p>
+        <h2>Built around a simple idea: slow down and look out for each other.</h2>
+        <div class="prose">
+          <p>I Drive 25 was created to bring greater attention to traffic safety in the places where everyday life happens&mdash;our neighborhoods and school zones.</p>
           <p>Our approach is rooted in community awareness and collaboration. We want residents to have useful information, drivers to understand the importance of safe speeds, and communities to have a voice in identifying traffic-safety concerns.</p>
           <div class="founder-note">
             <strong>Founded by a retired law-enforcement professional</strong>
@@ -143,31 +162,27 @@
     </section>
 
     <section id="donate" class="section donate">
-      <div class="container donate-box">
+      <div class="container donate-grid">
         <div>
-          <div class="eyebrow">SUPPORT THE MISSION</div>
           <h2>Help us promote safer neighborhoods and school zones.</h2>
           <p>Community support can help fund educational materials, traffic-safety awareness campaigns, signage, outreach, and future safety initiatives.</p>
         </div>
         <div class="donate-actions">
-          <a class="button primary big" href="mailto:info@idrive25.org?subject=I%20Drive%2025%20Donation%20Information">Donate / Get Involved</a>
-          <p class="small">I Drive 25 is pursuing charitable nonprofit status. Donation tax deductibility should only be represented once applicable requirements have been satisfied.</p>
+          <a class="button accent big" href="mailto:info@idrive25.org?subject=I%20Drive%2025%20Donation%20Information">Donate / Get Involved</a>
+          <p class="fine-print">I Drive 25 is pursuing charitable nonprofit status. Donation tax deductibility should only be represented once applicable requirements have been satisfied.</p>
         </div>
       </div>
     </section>
 
     <section class="section contact">
       <div class="container contact-inner">
-        <div>
-          <div class="eyebrow">GET INVOLVED</div>
-          <h2>Have a traffic-safety concern or want to partner?</h2>
-        </div>
+        <h2>Have a traffic-safety concern or want to partner?</h2>
         <a class="button secondary" href="mailto:info@idrive25.org">Contact I Drive 25</a>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container footer-grid">
       <div>
         <a class="brand footer-brand" href="#top"><img src="logo.png" alt="I Drive 25 logo"></a>
@@ -180,14 +195,21 @@
         <a href="#donate">Support</a>
       </div>
     </div>
-    <div class="container copyright">© 2026 I Drive 25. All rights reserved.</div>
+    <div class="container copyright">&copy; 2026 I Drive 25. All rights reserved.</div>
   </footer>
 
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav');
-    toggle.addEventListener('click', () => nav.classList.toggle('open'));
-    document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+    function setMenu(open) {
+      nav.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    }
+
+    toggle.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+    document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
   </script>
 </body>
 </html>
