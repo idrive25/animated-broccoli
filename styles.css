@@ -87,7 +87,7 @@ h3{font-size:22px;line-height:1.25;font-weight:700;margin:0 0 8px;color:var(--in
 /* Home page masthead: large centered logo, menu beneath */
 .masthead{position:relative}
 .masthead .nav-wrap{height:auto;flex-direction:column;justify-content:center;gap:0;padding-top:clamp(24px,4vw,44px)}
-.masthead .brand img{height:clamp(120px,15vw,180px);width:auto;max-width:min(92vw,560px);object-fit:contain}
+.masthead .brand img{height:clamp(150px,19vw,230px);width:auto;max-width:min(92vw,560px);object-fit:contain}
 .masthead .nav{justify-content:center;flex-wrap:wrap;padding:20px 0 22px}
 
 /* Buttons */
@@ -349,7 +349,7 @@ h3{font-size:22px;line-height:1.25;font-weight:700;margin:0 0 8px;color:var(--in
   .nav-wrap{height:82px}
   .brand img{height:56px;max-width:230px}
   .footer-brand img{height:52px}
-  .masthead .brand img{height:104px}
+  .masthead .brand img{height:132px}
   .program{gap:18px}
   .explore-list a{grid-template-columns:minmax(0,1fr) 20px;padding:22px 0}
   .explore-list strong,.explore-list span{grid-column:1}
