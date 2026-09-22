@@ -69,6 +69,17 @@
       </div>
     </section>
 
+    <section class="section tip" aria-labelledby="tip-heading">
+      <div class="container tip-card">
+        <div class="tip-sign" aria-hidden="true">!</div>
+        <div class="tip-copy">
+          <div class="tip-label">THIS WEEK&rsquo;S DRIVING TIP</div>
+          <h2 id="tip-heading" data-tip-title>Loading tip&hellip;</h2>
+          <p data-tip-body></p>
+        </div>
+      </div>
+    </section>
+
     <section class="explore" aria-labelledby="explore-heading">
       <div class="container">
         <h2 class="sr-only" id="explore-heading">Explore I Drive 25</h2>
@@ -113,6 +124,34 @@
     toggle.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
     document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => setMenu(false)));
     document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+    const TIPS = [
+      { title: "Ease off near stop signs.", body: "Come to a full, complete stop, then pause long enough to check both ways before moving again." },
+      { title: "Watch for kids between parked cars.", body: "Children can dart into the street without warning. Slow down and scan the sidewalks and gaps between vehicles as you pass." },
+      { title: "Treat 25 mph as a real limit, not a suggestion.", body: "On residential streets, even 10 mph over sharply increases stopping distance and the severity of any collision." },
+      { title: "Put the phone out of reach.", body: "A glance at a text can take your eyes off the road for several seconds—far enough to travel the length of a school bus." },
+      { title: "Yield to pedestrians at crosswalks.", body: "Come to a full stop and wave them through, even if there's no marked crosswalk sign nearby." },
+      { title: "Slow down for school buses.", body: "When a bus stops with lights flashing, stop well back and wait until the lights stop flashing and children are clear." },
+      { title: "Check mirrors before opening your door.", body: "A quick look for cyclists or pedestrians before you open the door prevents one of the most common neighborhood collisions." },
+      { title: "Leave extra space in the rain.", body: "Wet roads roughly double stopping distance. Slow down and increase your following distance in bad weather." },
+      { title: "Scan driveways as you drive by.", body: "Backing-out drivers often can't see around parked cars or hedges. Cover your brake as you pass driveways on residential streets." },
+      { title: "Take turns fully stopped.", body: "Rolling through a stop sign narrows your view of cross traffic and pedestrians. A full stop gives you time to look both ways." },
+      { title: "Model safe driving for young passengers.", body: "Kids learn driving habits by watching. Buckling up and slowing down sets the example before they're ever behind the wheel." },
+      { title: "Give cyclists at least three feet.", body: "When passing a cyclist, slow down and give as much room as you would want if the roles were reversed." }
+    ];
+    (function () {
+      const oneJan = new Date(new Date().getFullYear(), 0, 1);
+      const today = new Date();
+      const dayOfYear = Math.floor((today - oneJan) / 86400000);
+      const week = Math.floor(dayOfYear / 7);
+      const tip = TIPS[week % TIPS.length];
+      const titleEl = document.querySelector('[data-tip-title]');
+      const bodyEl = document.querySelector('[data-tip-body]');
+      if (titleEl && bodyEl) {
+        titleEl.textContent = tip.title;
+        bodyEl.textContent = tip.body;
+      }
+    })();
   </script>
 </body>
 </html>

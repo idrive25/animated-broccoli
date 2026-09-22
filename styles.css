@@ -177,6 +177,36 @@ h3{font-size:22px;line-height:1.25;font-weight:700;margin:0 0 8px;color:var(--in
 .message h2{color:#fff;margin:0;font-size:clamp(32px,4.4vw,54px)}
 .message p{margin:0;color:#d0d8df}
 
+/* Weekly driving tip */
+.tip{padding-top:0}
+.tip-card{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  gap:clamp(20px,3.5vw,32px);
+  align-items:start;
+  padding:clamp(28px,4vw,40px);
+  background:var(--paper);
+  border:2px solid var(--ink);
+  border-radius:18px;
+}
+.tip-sign{
+  flex:none;
+  position:relative;isolation:isolate;
+  width:60px;height:60px;
+  display:grid;place-items:center;
+  font-weight:900;font-size:30px;color:var(--ink);
+}
+.tip-sign::before{
+  content:"";z-index:-1;
+  position:absolute;inset:4px;
+  background:var(--sign-yellow);
+  border:3px solid var(--ink);border-radius:6px;
+  transform:rotate(45deg);
+}
+.tip-label{font-size:13px;font-weight:800;letter-spacing:2px;color:var(--blue);margin-bottom:8px}
+.tip-copy h2{margin:0 0 10px;font-size:clamp(24px,2.6vw,32px)}
+.tip-copy p{margin:0;font-size:18px;color:var(--muted);max-width:46rem}
+
 /* Home: links to each page */
 .explore{padding:clamp(48px,7vw,88px) 0}
 .explore-list{list-style:none;margin:0;padding:0;border-bottom:2px solid var(--ink)}
@@ -354,4 +384,6 @@ h3{font-size:22px;line-height:1.25;font-weight:700;margin:0 0 8px;color:var(--in
   .explore-list a{grid-template-columns:minmax(0,1fr) 20px;padding:22px 0}
   .explore-list strong,.explore-list span{grid-column:1}
   .explore-list a::after{grid-column:2;grid-row:1 / span 2}
+  .tip-card{grid-template-columns:1fr}
+  .tip-sign{margin-bottom:4px}
 }
