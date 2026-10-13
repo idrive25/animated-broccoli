@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>I Drive 25 | Safer Neighborhoods. Safer School Zones.</title>
-  <meta name="description" content="I Drive 25 is a California nonprofit focused on traffic safety awareness, safer driving, and community support for neighborhoods and school zones.">
+  <title>I Drive 25 | Coming Soon</title>
+  <meta name="description" content="I Drive 25 is a California nonprofit focused on traffic safety awareness, safer driving, and community support for neighborhoods and school zones. Our site is being updated.">
   <meta name="theme-color" content="#0b4f9c">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,144 +14,38 @@
 <body>
   <a class="skip" href="#main">Skip to main content</a>
 
-  <header class="site-header masthead">
-    <div class="container nav-wrap masthead-inner">
-      <a class="brand" href="index.html" aria-label="I Drive 25 home">
-        <img src="logo.png" alt="I Drive 25 logo">
-      </a>
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
-      <nav class="nav" id="site-nav">
-        <a href="mission.html">Our Mission</a>
-        <a href="what-we-do.html">What We Do</a>
-        <a href="community.html">Community</a>
-        <a href="about.html">About</a>
-        <a class="nav-button" href="support.html">Support Us</a>
-      </nav>
+  <main id="main" class="soon-page">
+    <img class="soon-logo" src="logo.png" alt="I Drive 25 logo">
+    <h1>We're working on something new.</h1>
+    <p class="lead">I Drive 25 is offline for a bit while we make updates. We'll be back soon &mdash; thanks for your patience.</p>
+
+    <div class="soon-card">
+      <h2>Get in touch</h2>
+      <p class="soon-card-sub">Have a traffic-safety concern, or want to reach us in the meantime? Send a message below.</p>
+      <form class="contact-form" action="https://formsubmit.co/David.pecoraro@idrive25.org" method="POST" accept-charset="UTF-8">
+        <input type="hidden" name="_subject" value="New message from the I Drive 25 website">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://idrive25.org/index.html">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button class="button primary big" type="submit">Send message</button>
+      </form>
     </div>
-  </header>
-
-  <main id="main">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <h1>25 mph can make a difference.</h1>
-          <p class="lead">
-            I Drive 25 promotes safe driving and works to protect children in neighborhoods and school zones by encouraging a 25 mph speed limit.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="support.html">Support I Drive 25</a>
-            <a class="button secondary" href="mission.html">Learn More</a>
-          </div>
-          <ul class="trust-row">
-            <li><strong>25 mph</strong><span>Safer-speed awareness</span></li>
-            <li><strong>School zones</strong><span>Protecting children</span></li>
-            <li><strong>Neighborhoods</strong><span>Building safer streets</span></li>
-          </ul>
-        </div>
-
-        <div class="hero-sign" aria-hidden="true">
-          <div class="sign">
-            <div class="sign-face">
-              <span class="sign-word">SPEED</span>
-              <span class="sign-word">LIMIT</span>
-              <span class="sign-num">25</span>
-            </div>
-          </div>
-          <div class="post"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section message" aria-labelledby="message-heading">
-      <div class="container message-grid">
-        <h2 id="message-heading">Slow down. Stay alert. Look out for one another.</h2>
-        <p>Small changes in driving habits can help create safer places for families, students, pedestrians, and everyone who calls a neighborhood home.</p>
-      </div>
-    </section>
-
-    <section class="section tip" aria-labelledby="tip-heading">
-      <div class="container tip-card">
-        <div class="tip-sign" aria-hidden="true">!</div>
-        <div class="tip-copy">
-          <div class="tip-label">THIS WEEK&rsquo;S DRIVING TIP</div>
-          <h2 id="tip-heading" data-tip-title>Loading tip&hellip;</h2>
-          <p data-tip-body></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="explore" aria-labelledby="explore-heading">
-      <div class="container">
-        <h2 class="sr-only" id="explore-heading">Explore I Drive 25</h2>
-        <ul class="explore-list">
-          <li><a href="mission.html"><strong>Our Mission</strong><span>Safer driving starts with awareness.</span></a></li>
-          <li><a href="what-we-do.html"><strong>What We Do</strong><span>Turning concern into community action.</span></a></li>
-          <li><a href="community.html"><strong>Community</strong><span>It takes all of us to make safer streets.</span></a></li>
-          <li><a href="about.html"><strong>About</strong><span>Built around a simple idea: slow down and look out for each other.</span></a></li>
-          <li><a href="support.html"><strong>Support Us</strong><span>Help us promote safer neighborhoods and school zones.</span></a></li>
-        </ul>
-      </div>
-    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand footer-brand" href="index.html"><img src="logo.png" alt="I Drive 25 logo"></a>
-        <p>Safer neighborhoods. Safer school zones. Safer choices.</p>
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="mission.html">Mission</a>
-        <a href="what-we-do.html">What We Do</a>
-        <a href="community.html">Community</a>
-        <a href="about.html">About</a>
-        <a href="support.html">Support</a>
-      </div>
-    </div>
+  <footer class="site-footer soon-footer">
     <div class="container copyright">&copy; 2026 I Drive 25. All rights reserved.</div>
   </footer>
-
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav');
-
-    function setMenu(open) {
-      nav.classList.toggle('open', open);
-      toggle.setAttribute('aria-expanded', String(open));
-    }
-
-    toggle.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
-    document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => setMenu(false)));
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
-
-    const TIPS = [
-      { title: "Ease off near stop signs.", body: "Come to a full, complete stop, then pause long enough to check both ways before moving again." },
-      { title: "Watch for kids between parked cars.", body: "Children can dart into the street without warning. Slow down and scan the sidewalks and gaps between vehicles as you pass." },
-      { title: "Treat 25 mph as a real limit, not a suggestion.", body: "On residential streets, even 10 mph over sharply increases stopping distance and the severity of any collision." },
-      { title: "Put the phone out of reach.", body: "A glance at a text can take your eyes off the road for several seconds—far enough to travel the length of a school bus." },
-      { title: "Yield to pedestrians at crosswalks.", body: "Come to a full stop and wave them through, even if there's no marked crosswalk sign nearby." },
-      { title: "Slow down for school buses.", body: "When a bus stops with lights flashing, stop well back and wait until the lights stop flashing and children are clear." },
-      { title: "Check mirrors before opening your door.", body: "A quick look for cyclists or pedestrians before you open the door prevents one of the most common neighborhood collisions." },
-      { title: "Leave extra space in the rain.", body: "Wet roads roughly double stopping distance. Slow down and increase your following distance in bad weather." },
-      { title: "Scan driveways as you drive by.", body: "Backing-out drivers often can't see around parked cars or hedges. Cover your brake as you pass driveways on residential streets." },
-      { title: "Take turns fully stopped.", body: "Rolling through a stop sign narrows your view of cross traffic and pedestrians. A full stop gives you time to look both ways." },
-      { title: "Model safe driving for young passengers.", body: "Kids learn driving habits by watching. Buckling up and slowing down sets the example before they're ever behind the wheel." },
-      { title: "Give cyclists at least three feet.", body: "When passing a cyclist, slow down and give as much room as you would want if the roles were reversed." }
-    ];
-    (function () {
-      const oneJan = new Date(new Date().getFullYear(), 0, 1);
-      const today = new Date();
-      const dayOfYear = Math.floor((today - oneJan) / 86400000);
-      const week = Math.floor(dayOfYear / 7);
-      const tip = TIPS[week % TIPS.length];
-      const titleEl = document.querySelector('[data-tip-title]');
-      const bodyEl = document.querySelector('[data-tip-body]');
-      if (titleEl && bodyEl) {
-        titleEl.textContent = tip.title;
-        bodyEl.textContent = tip.body;
-      }
-    })();
-  </script>
 </body>
 </html>

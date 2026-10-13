@@ -177,6 +177,31 @@ h3{font-size:22px;line-height:1.25;font-weight:700;margin:0 0 8px;color:var(--in
 .message h2{color:#fff;margin:0;font-size:clamp(32px,4.4vw,54px)}
 .message p{margin:0;color:#d0d8df}
 
+/* Coming-soon page */
+.soon-page{
+  min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;
+  padding:clamp(56px,10vw,96px) 20px;
+  background:var(--paper);
+}
+.soon-logo{
+  width:clamp(170px,26vw,260px);height:auto;object-fit:contain;
+  margin-bottom:clamp(28px,5vw,44px);
+}
+.soon-page h1{font-size:clamp(34px,5vw,56px);max-width:18em;margin:0 0 16px}
+.soon-page .lead{max-width:34rem;margin:0 0 44px}
+.soon-card{
+  width:100%;max-width:560px;text-align:left;
+  background:#fff;
+  border:2px solid var(--ink);border-radius:18px;
+  padding:clamp(28px,4vw,40px);
+}
+.soon-card h2{font-size:22px;margin:0 0 8px}
+.soon-card-sub{margin:0 0 24px;color:var(--muted);font-size:16px}
+.soon-footer{padding:28px 0;background:transparent;color:var(--muted)}
+.soon-footer .copyright{border-top:0;margin-top:0;padding-top:0}
+
 /* Weekly driving tip */
 .tip{padding-top:0}
 .tip-card{
